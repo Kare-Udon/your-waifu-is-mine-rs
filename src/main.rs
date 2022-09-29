@@ -9,9 +9,11 @@ mod telegram;
 mod twitter;
 mod pixiv;
 mod database;
+mod translate;
 
 use telegram::telegram as tg;
 use database::database as db;
+use translate::translate as tr;
 
 type MyDialogue = Dialogue<State, InMemStorage<State>>;
 type HandlerResult = Result<(), Box<dyn Error + Send + Sync>>;
